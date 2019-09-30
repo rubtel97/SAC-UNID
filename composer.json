@@ -1,0 +1,12 @@
+{
+    "require": {
+        "components/jquery": "3.3.1",
+        "catfan/medoo": "1.7.3",
+        "components/bootstrap": "4.3.1",
+        "fortawesome/font-awesome": "5.11.2",
+        "fullcalendar/fullcalendar": "*"
+    },
+    "config": {
+        "component-dir": "/vendor"
+    }
+}
