@@ -64,6 +64,7 @@ y guardar tus cambios nuevamente.
 **Project Owner:** Mario Morales
 ### Team Usuarios y Cañones
 **Team Leader:** Karen Alvarez
+
 **Miembros:**
 * Diana González
 * Daniel Rojas
@@ -71,6 +72,7 @@ y guardar tus cambios nuevamente.
 
 ### Team Reservaciones
 **Team Leader:** Luis Martinez
+
 **Miembros:**
 * Gabriel Fonseca
 * Hugo Arroyo
@@ -78,6 +80,7 @@ y guardar tus cambios nuevamente.
 
 ### Team Niveles, Servicios y Entradas:
 **Team Leader:** Alan Cauich
+
 **Miembros:**
 * Ruben Tellez
 * Armando Robles
@@ -85,12 +88,14 @@ y guardar tus cambios nuevamente.
 
 ### Team Salones y Grados:
 **Team Leader:** Luis Torres
+
 **Miembros:**
 * Edier Cab
 * Maximiliano Leyva
 * 
 ### Team SLogs y Horarios::
 **Team Leader:** Carlos Maldonado
+
 **Miembros:**
 * Eduardo Ojeda
 * Isaac Gamboa 
