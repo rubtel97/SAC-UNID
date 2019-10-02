@@ -29,7 +29,7 @@
       <div class="contenedor-principal">
         <div class="header">
           <h3>Usuarios</h3>
-          <div class="boton-nuevo" onClick="newAlert()">
+          <div class="boton-nuevo" id="btn-new" onClick="newAlert()">
             <a href="#"><i class="fas fa-user-plus fa-lg" title="Añadir nuevo usuario"></i></a>
           </div>
           <div class="boton-cancelar" onClick="cancelAlert()">
@@ -48,7 +48,6 @@
                 <th scope="col">Email</th>
                 <th scope="col">Nivel</th>
                 <th scope="col">Status</th>
-                <th scope="col">Password</th>
                 <th scope="col">Acciones</th>
               </tr>
             </thead>
@@ -60,15 +59,15 @@
                ?>
               <tr>
                 <th scope="row"><?php echo $usuario['id_usr']; ?></th>
-                <td><?php echo $usuario['matricula_usr']; ?></td>
+                <td ><?php echo $usuario['matricula_usr']; ?></td>
                 <td><?php echo utf8_encode($usuario['nombre_usr']); ?></td>
                 <td><?php echo $usuario['telefono_usr']; ?></td>
                 <td><?php echo $usuario['email_usr']; ?></td>
                 <td><?php echo $usuario['nivel_usr']; ?></td>
                 <td><?php echo $usuario['status_usr']; ?></td>
-                <td><?php echo $usuario['password_usr']; ?></td>
                 <td>
-                  <a href="#"><i class="fas fa-edit" title="Editar"></i></a> <a href="#"><i class="fas fa-trash-alt" title="Eliminar"></i></a>
+                  <a href="#" data="<?php echo $usuario['id_usr']?>" class="btn-edit"><i class="fas fa-edit" title="Editar" onClick="newAlert()"></i></a> 
+                  <a href="#" data="<?php echo $usuario['id_usr']?>" class="btn-delete"><i class="fas fa-trash-alt" title="Eliminar"></i></a>
                 </td>
               </tr>
               <?php
@@ -82,14 +81,14 @@
           <!-- FIN TABLA -->
           <!-- FORMULARIO -->
           <div class="form">
-            <form action="" class="form-register">
-              <input type="text" placeholder="Matricula" />
-              <input type="text" placeholder="Nombre" />
-              <input type="text" placeholder="Telefono" />
-              <input type="text" placeholder="Email" />
-              <input type="password" placeholder="Contraseña" />
-              <input type="hidden" value="1" name="status_usr" />
-              <button>Registrar usuario <i class="fas fa-user-plus fa-sm"></i></button>
+            <form class="form-register" id="user-form">
+              <input type="text" id="matricula" name="matricula" placeholder="Matricula" />
+              <input type="text" id="nombre" name="nombre" placeholder="Nombre" />
+              <input type="text" id="telefono" name="telefono" placeholder="Telefono" />
+              <input type="text" id="email" name="email" placeholder="Email" />
+              <input type="password" id="contraseña" name="contraseña" placeholder="Contraseña" />
+              <input type="hidden" id="status" name="status" value="1" name="status_usr" />
+              <button type="button" id="btn-form"><i class="fas fa-user-plus fa-sm"></i></button>
             </form>
           </div>
           <!-- FIN FORMULARIO -->
@@ -101,6 +100,7 @@
     </footer>
     <script src="/vendor/fortawesome/font-awesome/js/all.js" data-auto-replace-svg="nest"></script>
     <script src="/vendor/components/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/modulos/usuarios/main.js"></script>
   </body>
 </html>
 <?php
