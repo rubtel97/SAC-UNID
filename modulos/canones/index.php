@@ -59,8 +59,8 @@
                 <td><?php echo utf8_encode($canon['nombre_can']); ?></td>
                 <td><?php echo $canon['status_can']; ?></td>
                 <td>
-                  <a href="#"><i class="fas fa-edit" title="Editar"></i></a> 
-                  <a href="#"><i class="fas fa-trash-alt" title="Eliminar"></i></a>
+                  <a href="#" data="<?php echo $canon['id_can']; ?>" class="btn-edit"><i class="fas fa-edit" title="Editar"></i></a> 
+                  <a href="#" data="<?php echo $canon['id_can']; ?>" class="btn-delete"><i class="fas fa-trash-alt" title="Eliminar"></i></a>
                 </td>
                 <?php
                             }
@@ -88,6 +88,7 @@
     </footer>
     <script src="/vendor/fortawesome/font-awesome/js/all.js" data-auto-replace-svg="nest"></script>
     <script src="/vendor/components/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/modulos/canones/main.js"></script>
   </body>
 </html>
 <?php
