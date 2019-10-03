@@ -88,7 +88,7 @@
               <input type="text" id="email" name="email" placeholder="Email" />
               <input type="password" id="contraseña" name="contraseña" placeholder="Contraseña" />
               <input type="hidden" id="status" name="status" value="1" name="status_usr" />
-              <button type="button" id="btn-form"><i class="fas fa-user-plus fa-sm"></i></button>
+              <button type="button" id="btn-form"></button>
             </form>
           </div>
           <!-- FIN FORMULARIO -->
