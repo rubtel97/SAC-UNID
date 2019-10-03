@@ -25,7 +25,8 @@ $(document).ready(function() {
         $("#contraseña").val(respuesta.contraseña);
         obj = {
           accion: "updateUsuario",
-          usuario: id
+          usuario: id,
+          matricula_original: respuesta.matricula
         };
       },
       "JSON"
@@ -52,9 +53,11 @@ $(document).ready(function() {
           obj,
           function(respuesta) {
             if (respuesta.status == 1) {
-              swal("Éxito", "Usuario eliminado correctamente", "success").then(() => {
-                cancelAlert();
-              });
+              swal("Éxito", "Usuario eliminado correctamente", "success").then(
+                () => {
+                  location.reload();
+                }
+              );
             } else {
               errorAlert();
             }
@@ -81,9 +84,12 @@ $(document).ready(function() {
             if (respuesta.status == 0) {
               swal("¡ERROR!", "Campos vacios", "error");
             } else if (respuesta.status == 1) {
-              swal("Éxito", "Usuario añadido correctamente", "success").then(() => {
-                cancelAlert();
-              });
+              swal("Éxito", "Usuario añadido correctamente", "success").then(
+                () => {
+                  cancelAlert();
+                  location.reload();
+                }
+              );
             } else if (respuesta.status == 2) {
               swal("¡ERROR!", "La matricula ya existe", "error");
             } else {
@@ -101,9 +107,12 @@ $(document).ready(function() {
             if (respuesta.status == 0) {
               swal("¡ERROR!", "Campos vacios", "error");
             } else if (respuesta.status == 1) {
-              swal("Éxito", "Usuario editado  correctamente", "success").then(() => {
-                cancelAlert();
-              });
+              swal("Éxito", "Usuario editado  correctamente", "success").then(
+                () => {
+                  cancelAlert();
+                  location.reload();
+                }
+              );
             } else if (respuesta.status == 2) {
               swal("¡ERROR!", "La matricula ya existe", "error");
             } else {
