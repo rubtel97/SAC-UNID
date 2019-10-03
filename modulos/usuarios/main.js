@@ -52,9 +52,11 @@ $(document).ready(function() {
           obj,
           function(respuesta) {
             if (respuesta.status == 1) {
-              swal("Éxito", "Usuario eliminado correctamente", "success").then(() => {
-                cancelAlert();
-              });
+              swal("Éxito", "Usuario eliminado correctamente", "success").then(
+                () => {
+                  cancelAlert();
+                }
+              );
             } else {
               errorAlert();
             }
@@ -81,9 +83,11 @@ $(document).ready(function() {
             if (respuesta.status == 0) {
               swal("¡ERROR!", "Campos vacios", "error");
             } else if (respuesta.status == 1) {
-              swal("Éxito", "Usuario añadido correctamente", "success").then(() => {
-                cancelAlert();
-              });
+              swal("Éxito", "Usuario añadido correctamente", "success").then(
+                () => {
+                  cancelAlert();
+                }
+              );
             } else if (respuesta.status == 2) {
               swal("¡ERROR!", "La matricula ya existe", "error");
             } else {
@@ -101,9 +105,11 @@ $(document).ready(function() {
             if (respuesta.status == 0) {
               swal("¡ERROR!", "Campos vacios", "error");
             } else if (respuesta.status == 1) {
-              swal("Éxito", "Usuario editado  correctamente", "success").then(() => {
-                cancelAlert();
-              });
+              swal("Éxito", "Usuario editado  correctamente", "success").then(
+                () => {
+                  cancelAlert();
+                }
+              );
             } else if (respuesta.status == 2) {
               swal("¡ERROR!", "La matricula ya existe", "error");
             } else {

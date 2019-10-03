@@ -67,7 +67,7 @@
                 <td><?php echo $usuario['status_usr']; ?></td>
                 <td>
                   <a href="#" data="<?php echo $usuario['id_usr']?>" class="btn-edit"><i class="fas fa-edit" title="Editar" onClick="newAlert()"></i></a> 
-                  <a href="#" data="<?php echo $usuario['id_usr']?>" class="btn-delete"><i class="fas fa-trash-alt" title="Eliminar"></i></a>
+                  <a href="#" data="<?php echo $usuario['id_usr']?>" class="btn-delete"><i class="fas fa-trash-alt deleteUsuario" title="Eliminar"></i></a>
                 </td>
               </tr>
               <?php
